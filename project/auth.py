@@ -45,7 +45,7 @@ def signup_post():
         app.logger.debug("User email already exists")
         return redirect(url_for('auth.signup'))
 
-    # create a new user with the form data. TODO: Hash the password so the plaintext version isn't saved.
+    # create a new user with the form data. TODO:  Hash the password so the plaintext version isn't saved.
     new_user = User(email=email, name=name, password=password)
 
     # add the new user to the database
